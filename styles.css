@@ -1,0 +1,589 @@
+/* ===========================================
+   Interactive Web Experience - CSS Styles
+   Part 1: CSS3 Transitions and Animations
+   =========================================== */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.4;
+    color: #2d3748;
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+    min-height: 100vh;
+    transition: background 0.5s ease;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    padding: 1rem 0;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-title {
+    font-size: 2.5rem;
+    color: #e2e8f0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: titleGlow 3s ease-in-out infinite alternate;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: rgba(226, 232, 240, 0.8);
+    margin-top: 0.25rem;
+}
+
+/* Main Content Layout */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.section {
+    background: rgba(255, 255, 255, 0.95);
+    margin: 1rem 0;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.section h2 {
+    color: #2d3748;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    border-bottom: 2px solid #4299e1;
+    padding-bottom: 0.25rem;
+}
+
+/* Demo Container Styles */
+.demo-container {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #f7fafc;
+    border-radius: 8px;
+    border-left: 3px solid #4299e1;
+}
+
+.demo-container h3 {
+    color: #2d3748;
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+}
+
+/* ===========================================
+   PART 1: CSS3 TRANSITIONS AND ANIMATIONS
+   =========================================== */
+
+/* Button Styles with Hover Effects */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #4299e1, #3182ce);
+    color: white;
+    box-shadow: 0 3px 12px rgba(66, 153, 225, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(66, 153, 225, 0.4);
+    background: linear-gradient(45deg, #3182ce, #2c5282);
+}
+
+.btn-secondary {
+    background: linear-gradient(45deg, #ed64a6, #d53f8c);
+    color: white;
+    box-shadow: 0 3px 12px rgba(237, 100, 166, 0.3);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(237, 100, 166, 0.4);
+}
+
+.btn-accent {
+    background: linear-gradient(45deg, #38b2ac, #319795);
+    color: white;
+    box-shadow: 0 3px 12px rgba(56, 178, 172, 0.3);
+}
+
+.btn-accent:hover {
+    transform: translateY(-2px) rotate(1deg);
+    box-shadow: 0 6px 20px rgba(56, 178, 172, 0.4);
+}
+
+.btn-demo, .btn-calc, .btn-trigger, .btn-loading, .btn-modal, .btn-theme {
+    background: linear-gradient(45deg, #f6ad55, #ed8936);
+    color: #744210;
+    margin: 0.25rem;
+}
+
+.btn-demo:hover, .btn-calc:hover, .btn-trigger:hover, .btn-loading:hover, .btn-modal:hover, .btn-theme:hover {
+    transform: translateY(-1px);
+    background: linear-gradient(45deg, #ed8936, #dd6b20);
+}
+
+/* Button Group Layout */
+.button-group {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Animation Boxes */
+.animation-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.75rem;
+    margin: 0.75rem 0;
+}
+
+.box {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.box-fade {
+    background: linear-gradient(45deg, #4299e1, #3182ce);
+}
+
+.box-fade:hover {
+    opacity: 0.7;
+    transform: scale(1.05);
+}
+
+.box-slide {
+    background: linear-gradient(45deg, #ed64a6, #d53f8c);
+}
+
+.box-slide:hover {
+    transform: translateX(20px);
+}
+
+.box-scale {
+    background: linear-gradient(45deg, #38b2ac, #319795);
+}
+
+.box-scale:hover {
+    transform: scale(1.2);
+}
+
+.box-rotate {
+    background: linear-gradient(45deg, #68d391, #48bb78);
+}
+
+.box-rotate:hover {
+    transform: rotate(15deg) scale(1.1);
+}
+
+/* Keyframe Animations */
+.keyframe-demo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.spinning-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #4299e1, #3182ce);
+    animation: spin 2s linear infinite;
+}
+
+.bouncing-ball {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ed64a6, #d53f8c);
+    animation: bounce 1.5s ease-in-out infinite;
+}
+
+.pulsing-heart {
+    font-size: 2.5rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Keyframe Definitions */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+@keyframes titleGlow {
+    from { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); }
+    to { text-shadow: 2px 2px 20px rgba(255, 255, 255, 0.5); }
+}
+
+/* ===========================================
+   PART 2: JAVASCRIPT FUNCTION DEMONSTRATIONS
+   =========================================== */
+
+/* Function Demo Styles */
+.function-demo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.output-box {
+    background: #2d3748;
+    color: #e2e8f0;
+    padding: 0.75rem;
+    border-radius: 6px;
+    min-height: 80px;
+    width: 100%;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    line-height: 1.3;
+    border: 2px solid #4a5568;
+}
+
+/* Calculator Styles */
+.calculator {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.calc-input, .calc-select {
+    padding: 10px;
+    border: 2px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calc-input:focus, .calc-select:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+.result-box {
+    background: linear-gradient(45deg, #4299e1, #3182ce);
+    color: white;
+    padding: 0.75rem;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===========================================
+   PART 3: COMBINED CSS & JAVASCRIPT INTERACTIONS
+   =========================================== */
+
+/* Trigger Demo Styles */
+.trigger-demo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.trigger-box {
+    width: 180px;
+    height: 180px;
+    background: linear-gradient(45deg, #4299e1, #3182ce);
+    border-radius: 12px;
+    transition: all 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Card Flip Animation */
+.card-container {
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 280px;
+    height: 180px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+    cursor: pointer;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-front {
+    background: linear-gradient(45deg, #4299e1, #3182ce);
+    color: white;
+}
+
+.card-back {
+    background: linear-gradient(45deg, #ed64a6, #d53f8c);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* Loading Animation */
+.loading-demo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #e2e8f0;
+    border-top: 3px solid #4299e1;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.loading-spinner.active {
+    opacity: 1;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    max-width: 450px;
+    width: 90%;
+    position: relative;
+    animation: slideIn 0.3s ease;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #333;
+}
+
+/* Theme Controls */
+.theme-controls {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Theme Variations */
+body.light-theme {
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    color: #2d3748;
+}
+
+body.dark-theme {
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+    color: #e2e8f0;
+}
+
+body.colorful-theme {
+    background: linear-gradient(135deg, #ed64a6 0%, #f6ad55 50%, #38b2ac 100%);
+}
+
+/* Modal Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { 
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to { 
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: rgba(226, 232, 240, 0.8);
+    background: rgba(0, 0, 0, 0.2);
+    margin-top: 1.5rem;
+}
+
+/* Additional Animation Classes for JavaScript Triggers */
+.animate-spin {
+    animation: spin 2s linear infinite !important;
+}
+
+.animate-bounce {
+    animation: bounce 1s ease-in-out infinite !important;
+}
+
+.animate-pulse {
+    animation: pulse 1s ease-in-out infinite !important;
+}
+
+.animate-scale {
+    animation: scale 1s ease-in-out infinite !important;
+}
+
+@keyframes scale {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* Error and Success States */
+.result-box.error {
+    background: linear-gradient(45deg, #f5576c, #f093fb) !important;
+}
+
+.result-box.success {
+    background: linear-gradient(45deg, #43e97b, #38f9d7) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .main-content {
+        padding: 0.75rem;
+    }
+    
+    .section {
+        padding: 1rem;
+        margin: 0.75rem 0;
+    }
+    
+    .demo-container {
+        padding: 0.75rem;
+        margin: 0.75rem 0;
+    }
+    
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .animation-boxes {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    
+    .keyframe-demo {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .theme-controls {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}

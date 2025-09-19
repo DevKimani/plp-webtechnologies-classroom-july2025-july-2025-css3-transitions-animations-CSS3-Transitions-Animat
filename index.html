@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive CSS & JavaScript Experience</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <h1 class="main-title">Interactive Web Experience</h1>
+        <p class="subtitle">CSS3 Animations + JavaScript Functions</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Part 1: CSS3 Transitions and Animations -->
+        <section class="section" id="css-animations">
+            <h2>Part 1: CSS3 Transitions & Animations</h2>
+            
+            <!-- Button Hover Effects -->
+            <div class="demo-container">
+                <h3>Button Hover Effects</h3>
+                <div class="button-group">
+                    <button class="btn btn-primary">Primary Button</button>
+                    <button class="btn btn-secondary">Secondary Button</button>
+                    <button class="btn btn-accent">Accent Button</button>
+                </div>
+            </div>
+
+            <!-- Smooth Animations -->
+            <div class="demo-container">
+                <h3>Smooth Transitions & Transforms</h3>
+                <div class="animation-boxes">
+                    <div class="box box-fade">Fade Effect</div>
+                    <div class="box box-slide">Slide Effect</div>
+                    <div class="box box-scale">Scale Effect</div>
+                    <div class="box box-rotate">Rotate Effect</div>
+                </div>
+            </div>
+
+            <!-- Keyframe Animations -->
+            <div class="demo-container">
+                <h3>Continuous Keyframe Animations</h3>
+                <div class="keyframe-demo">
+                    <div class="spinning-circle"></div>
+                    <div class="bouncing-ball"></div>
+                    <div class="pulsing-heart">💖</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 2: JavaScript Functions -->
+        <section class="section" id="javascript-functions">
+            <h2>Part 2: JavaScript Functions</h2>
+            
+            <!-- Function Demonstrations -->
+            <div class="demo-container">
+                <h3>Function Scope & Parameters</h3>
+                <div class="function-demo">
+                    <button class="btn btn-demo" onclick="calculateArea()">Calculate Area</button>
+                    <button class="btn btn-demo" onclick="demonstrateScope()">Show Scope</button>
+                    <button class="btn btn-demo" onclick="processArray()">Process Array</button>
+                    <div id="function-output" class="output-box"></div>
+                </div>
+            </div>
+
+            <!-- Interactive Calculator -->
+            <div class="demo-container">
+                <h3>Interactive Calculator</h3>
+                <div class="calculator">
+                    <input type="number" id="num1" placeholder="First number" class="calc-input">
+                    <select id="operation" class="calc-select">
+                        <option value="add">Add</option>
+                        <option value="subtract">Subtract</option>
+                        <option value="multiply">Multiply</option>
+                        <option value="divide">Divide</option>
+                    </select>
+                    <input type="number" id="num2" placeholder="Second number" class="calc-input">
+                    <button class="btn btn-calc" onclick="performCalculation()">Calculate</button>
+                    <div id="calc-result" class="result-box"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 3: Combined CSS & JavaScript -->
+        <section class="section" id="combined-interactions">
+            <h2>Part 3: CSS + JavaScript Magic</h2>
+            
+            <!-- Animated Box Trigger -->
+            <div class="demo-container">
+                <h3>Button-Triggered Animation</h3>
+                <div class="trigger-demo">
+                    <button class="btn btn-trigger" onclick="animateBox()">Animate Box!</button>
+                    <div id="animated-box" class="trigger-box"></div>
+                </div>
+            </div>
+
+            <!-- Card Flip Animation -->
+            <div class="demo-container">
+                <h3>Card Flip Animation</h3>
+                <div class="card-container">
+                    <div class="card" id="flip-card" onclick="flipCard()">
+                        <div class="card-front">
+                            <h4>Click to Flip!</h4>
+                            <p>Front of card</p>
+                        </div>
+                        <div class="card-back">
+                            <h4>Surprise!</h4>
+                            <p>Back of card</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loading Animation Control -->
+            <div class="demo-container">
+                <h3>Loading Animation Control</h3>
+                <div class="loading-demo">
+                    <button class="btn btn-loading" onclick="startLoading()">Start Loading</button>
+                    <button class="btn btn-loading" onclick="stopLoading()">Stop Loading</button>
+                    <div id="loading-spinner" class="loading-spinner"></div>
+                </div>
+            </div>
+
+            <!-- Modal Popup -->
+            <div class="demo-container">
+                <h3>Modal Popup Animation</h3>
+                <button class="btn btn-modal" onclick="openModal()">Open Modal</button>
+                <div id="modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <h3>Animated Modal</h3>
+                        <p>This modal slides in and fades out with smooth animations!</p>
+                        <button class="btn btn-primary" onclick="closeModal()">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Color Theme Switcher -->
+            <div class="demo-container">
+                <h3>Dynamic Theme Switcher</h3>
+                <div class="theme-controls">
+                    <button class="btn btn-theme" onclick="changeTheme('light')">Light Theme</button>
+                    <button class="btn btn-theme" onclick="changeTheme('dark')">Dark Theme</button>
+                    <button class="btn btn-theme" onclick="changeTheme('colorful')">Colorful Theme</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; Interactive Web Experience - CSS3 + JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
